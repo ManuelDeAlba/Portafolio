@@ -4,97 +4,184 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title>Manuel De Alba</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/8eba0ac01b.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/anim.css">
 </head>
 <body>
 	<header id="inicio" class="header">
+
 		<div class="adorno adorno-1"></div>
 		<div class="adorno adorno-2"></div>
 		<div class="adorno adorno-3"></div>
 		<div class="adorno adorno-4"></div>
-		<nav class="menu">
+
+		<nav class="navbar">
+			<i class="fas fa-bars hamburguesa"></i>
+			<div class="menu">
+				<a href="#" class="menu__item menu__item-cta">Contacto</a>
+				<a href="#inicio" class="menu__item">Inicio</a>
+				<a href="#informacion" class="menu__item">Información</a>
+			</div>
+		</nav>
+
+		<div class="menu-mobile">
+			<i class="fas fa-times cerrar"></i>
 			<a href="#" class="menu__item menu__item-cta">Contacto</a>
 			<a href="#inicio" class="menu__item">Inicio</a>
 			<a href="#informacion" class="menu__item">Información</a>
-		</nav>
+		</div>
+
 		<div class="contenedor header__contenido">
 			<h1 class="header__titulo anim-aumentar-aparecer">Manuel De Alba</h1>
 			<h2 class="header__subtitulo anim-izquierda-aparecer">Desarrollador Web Frontend</h2>
 			<a href="#" class="contacto anim-aparecer">Contacto</a>
 		</div>
+
 	</header>
 	<main id="informacion">
+
 		<section class="presentacion contenedor anim-aparecer">
-			<h2 class="subtitulo">Presentación</h2>
-			<p class="presentacion__texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit quod necessitatibus ipsa velit beatae deserunt quos nam recusandae neque consequuntur dolore, itaque exercitationem, accusamus doloribus sequi commodi laboriosam quasi distinctio!</p>
-			<p class="presentacion__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illo, perspiciatis eaque, voluptas odit quaerat nesciunt repellendus recusandae saepe nihil quas vero minus ad at dignissimos? Nam modi asperiores eius.</p>
-		</section>
-		<section class="tecnologias">
-			<div class="contenedor">
-				<h2 class="subtitulo tecnologias__titulo anim-derecha">Tecnologías</h2>
-				<div class="tecnologias__contenedor">
-					<div class="tecnologia anim-derecha-aparecer">
-						<span class="tecnologia__titulo">HTML</span>
-						<div class="tecnologia__imagen">
-							<img src="img/html.png" alt="" class="tecnologia__img">
-							<div class="tecnologia__imagen-detras">
-								<p class="tecnologia__porcentaje">100%</p>
-							</div>
-						</div>
-					</div>
-					<div class="tecnologia anim-derecha-aparecer">
-						<span class="tecnologia__titulo">CSS</span>
-						<div class="tecnologia__imagen">
-							<img src="img/css.png" alt="" class="tecnologia__img">
-							<div class="tecnologia__imagen-detras">
-								<p class="tecnologia__porcentaje">100%</p>
-							</div>
-						</div>
-					</div>
-					<div class="tecnologia anim-derecha-aparecer">
-						<span class="tecnologia__titulo">JAVASCRIPT</span>
-						<div class="tecnologia__imagen">
-							<img src="img/javascript.png" alt="" class="tecnologia__img">
-							<div class="tecnologia__imagen-detras">
-								<p class="tecnologia__porcentaje">100%</p>
-							</div>
-						</div>
-					</div>
-					<div class="tecnologia anim-derecha-aparecer">
-						<span class="tecnologia__titulo">REACT</span>
-						<div class="tecnologia__imagen">
-							<img src="img/react.png" alt="" class="tecnologia__img dropshadow">
-							<div class="tecnologia__imagen-detras">
-								<p class="tecnologia__porcentaje">100%</p>
-							</div>
-						</div>
-					</div>
+			<h2 class="subtitulo txt-center">Presentación</h2>
+			
+			<div class="presentacion__contenido">
+				<img src="img/dev.svg" class="presentacion__img" alt="Desarrollador web">
+				<div class="presentacion__textos">
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit quod necessitatibus ipsa velit beatae deserunt quos nam recusandae neque consequuntur dolore, itaque exercitationem, accusamus doloribus sequi commodi laboriosam quasi distinctio!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illo, perspiciatis eaque, voluptas odit quaerat nesciunt repellendus recusandae saepe nihil quas vero minus ad at dignissimos? Nam modi asperiores eius.</p>
 				</div>
 			</div>
 		</section>
+
+		<section class="tecnologias">
+			<div class="contenedor">
+
+				<h2 class="subtitulo tecnologias__titulo txt-center anim-derecha">Tecnologías</h2>
+
+				<div class="tecnologias__contenedor">
+
+					<div class="tecnologia anim-derecha-aparecer">
+						<div class="tecnologia__imagen">
+							<img src="img/html.png" alt="" class="tecnologia__img">
+							<div class="tecnologia__imagen-detras">
+								<span class="tecnologia__titulo">HTML</span>
+								<p class="tecnologia__porcentaje"><i class="fas fa-battery-three-quarters"></i></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tecnologia anim-derecha-aparecer">
+						<div class="tecnologia__imagen">
+							<img src="img/css.png" alt="" class="tecnologia__img">
+							<div class="tecnologia__imagen-detras">
+								<span class="tecnologia__titulo">CSS</span>
+								<p class="tecnologia__porcentaje"><i class="fas fa-battery-three-quarters"></i></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tecnologia anim-derecha-aparecer">
+						<div class="tecnologia__imagen">
+							<img src="img/javascript.png" alt="" class="tecnologia__img">
+							<div class="tecnologia__imagen-detras">
+								<span class="tecnologia__titulo">JAVASCRIPT</span>
+								<p class="tecnologia__porcentaje"><i class="fas fa-battery-three-quarters"></i></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tecnologia anim-derecha-aparecer">
+						<div class="tecnologia__imagen">
+							<img src="img/react.png" alt="" class="tecnologia__img">
+							<div class="tecnologia__imagen-detras">
+								<span class="tecnologia__titulo">REACT</span>
+								<p class="tecnologia__porcentaje"><i class="fas fa-battery-half"></i></p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="tecnologia anim-derecha-aparecer">
+						<div class="tecnologia__imagen">
+							<img src="img/node.png" alt="" class="tecnologia__img">
+							<div class="tecnologia__imagen-detras">
+								<span class="tecnologia__titulo">NODE</span>
+								<p class="tecnologia__porcentaje"><i class="fas fa-battery-quarter"></i></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tecnologia anim-derecha-aparecer">
+						<div class="tecnologia__imagen">
+							<img src="img/firebase.png" alt="" class="tecnologia__img">
+							<div class="tecnologia__imagen-detras">
+								<span class="tecnologia__titulo">FIREBASE</span>
+								<p class="tecnologia__porcentaje"><i class="fas fa-battery-quarter"></i></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+		<section class="proyectos">
+			<div class="proyectos__contenedor contenedor">
+
+				<h2 class="subtitulo txt-center">Proyectos</h2>
+
+				<div class="proyectos__galeria">
+					<div class="anim-aparecer proyecto colspan-2 md-colspan-1">
+						<h3>Proyecto 1</h3>
+					</div>
+	
+					<div class="anim-aparecer proyecto rowspan-2 md-rowspan-1">
+						<h3>Proyecto 2</h3>
+					</div>
+	
+					<div class="anim-aparecer proyecto rowspan-2 md-rowspan-1 md-colspan-2 sm-colspan-1">
+						<h3>Proyecto 3</h3>
+					</div>
+	
+					<div class="anim-aparecer proyecto">
+						<h3>Proyecto 4</h3>
+					</div>
+
+					<div class="anim-aparecer proyecto colspan-2 md-colspan-1">
+						<h3>Proyecto 5</h3>
+					</div>
+					
+				</div>
+
+			</div>
+		</section>
+
 	</main>
 	<footer class="footer">
-		<h3 class="footer__subtitulo">Contáctame</h3>
-		<div class="footer__redes">
-			<span class="footer__contenedor-icono">
-				<a href="#inicio" class="fab fa-facebook-f footer__icono"></a>
-			</span>
-			<span class="footer__contenedor-icono">
-				<a href="#inicio" class="fab fa-whatsapp footer__icono"></a>
-			</span>
-			<span class="footer__contenedor-icono">
-				<a href="#inicio" class="fab fa-youtube footer__icono"></a>
-			</span>
-		</div>
-	</footer>
-	<!-- TECNOLOGÍAS EN PROGRESO -->
-	<!-- Firebase -->
-	<!-- Node.js -->
 
-	<!-- GALERIA -->
-	<!-- Proyectos (css grid) -->
+		<div class="footer__contenedor anim-arriba-aparecer">
+			<h3 class="footer__subtitulo">Contáctame</h3>
+
+			<div class="footer__redes">
+				<span class="footer__contenedor-icono">
+					<a href="#inicio" class="fab fa-facebook-f footer__icono"></a>
+				</span>
+
+				<span class="footer__contenedor-icono">
+					<a href="#inicio" class="fab fa-whatsapp footer__icono"></a>
+				</span>
+
+				<span class="footer__contenedor-icono">
+					<a href="#inicio" class="fab fa-youtube footer__icono"></a>
+				</span>
+			</div>
+		</div>
+
+	</footer>
+
 	<script src="js/menu.js"></script>
 	<script src="js/anim.js"></script>
 	<script src="js/animaciones.js"></script>
