@@ -1,0 +1,70 @@
+---
+interface Props {
+    technology: string;
+}
+
+const TECHNOLOGIES = {
+    "html": {
+        name: "HTML",
+        icon: "https://cdn.svgporn.com/logos/html-5.svg",
+        class: "ring-orange-500"
+    },
+    "css": {
+        name: "CSS",
+        icon: "https://cdn.svgporn.com/logos/css-3.svg",
+        class: "ring-blue-500"
+    },
+    "js": {
+        name: "JavaScript",
+        icon: "https://cdn.svgporn.com/logos/javascript.svg",
+        class: "ring-yellow-500"
+    },
+    "react": {
+        name: "React",
+        icon: "https://cdn.svgporn.com/logos/react.svg",
+        class: "ring-blue-500"
+    },
+    "firebase": {
+        name: "Firebase",
+        icon: "https://cdn.svgporn.com/logos/firebase.svg",
+        class: "ring-orange-400"
+    },
+    "next": {
+        name: "Next.js",
+        icon: "https://cdn.svgporn.com/logos/nextjs-icon.svg",
+        class: "ring-black"
+    },
+    "tailwind": {
+        name: "Tailwind CSS",
+        icon: "https://cdn.svgporn.com/logos/tailwindcss-icon.svg",
+        class: "ring-blue-500"
+    },
+    "node": {
+        name: "Node.js",
+        icon: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+        class: "ring-green-600"
+    },
+    "sequelize": {
+        name: "Sequelize",
+        icon: "https://cdn.svgporn.com/logos/sequelize.svg",
+        class: "ring-blue-500"
+    },
+    "astro": {
+        name: "Astro",
+        icon: "https://cdn.svgporn.com/logos/astro-icon.svg",
+        class: "ring-black"
+    },
+    "postgresql": {
+        name: "PostgreSQL",
+        icon: "https://cdn.svgporn.com/logos/postgresql.svg",
+        class: "ring-blue-500"
+    },
+}
+
+const { technology } = Astro.props;
+---
+
+<div class={TECHNOLOGIES[technology].class + " flex justify-center items-center gap-1 rounded-md px-3 py-2 font-bold tracking-wide ring-2 hover:ring-4 transition-all" }>
+    <img class="size-4" src={TECHNOLOGIES[technology].icon} alt="Logo">
+    <h3 class="text-sm">{TECHNOLOGIES[technology].name}</h3>
+</div>

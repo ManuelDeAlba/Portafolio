@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Proyectos from '@/components/Proyectos.astro';
+import Contacto from '@/components/Contacto.astro';
+---
+
+<Layout title="Manuel De Alba" description="Manuel De Alba's Portfolio">
+	<Header />
+
+	<main class='w-[90%] max-w-[1000px] mx-auto'>
+		<Proyectos />
+
+		<Contacto />
+	</main>
+</Layout>

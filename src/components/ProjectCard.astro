@@ -1,0 +1,60 @@
+---
+interface Props {
+	src: string;
+	title: string;
+    description: string[];
+    technologies: string[];
+    github?: string;
+    web?: string;
+}
+
+import Github from '@/components/icons/Github.astro';
+import ExternalLink from '@/components/icons/ExternalLink.astro';
+import TechnologyPill from './TechnologyPill.astro';
+
+const { src="https://picsum.photos/500", title="Sin título", description=["Sin descripción"], technologies=[], github, web } = Astro.props;
+---
+
+<div class="flex flex-col bg-slate-700 max-w-full rounded-md overflow-hidden">
+    <figure class="w-full h-[300px] overflow-hidden">
+        <img class="w-full h-full object-cover hover:scale-110 transition-all" src={src} alt="Proyecto skillup" />
+    </figure>
+
+    <div class="flex flex-col flex-1 p-8">
+        <h3 class='text-2xl font-bold mb-4'>{title}</h3>
+        <div class="flex-1">
+            {
+                description.map(p => (
+                    <p class="text-lg max-w-[60ch] text-pretty mb-8">{p}</p>
+                ))
+            }
+        </div>
+
+        <div class="text-2xl flex flex-wrap gap-4 mb-8">
+            {
+                technologies.length > 0 && (
+                    technologies.map(technology => (
+                        <TechnologyPill technology={technology} />
+                    ))
+                )
+            }
+        </div>
+        
+        <div class="flex justify-evenly items-center gap-4">
+            {
+                github != undefined && (
+                    <a class="w-[30px] text-xl" href={github} target="_blank">
+                        <Github class="transition hover:-translate-y-1" />
+                    </a>
+                )
+            }
+            {
+                web != undefined && (
+                    <a class="w-[30px] text-xl" href={web} target='_blank'>
+                        <ExternalLink class="transition hover:-translate-y-1" />
+                    </a>
+                )
+            }
+        </div>
+    </div>
+</div>

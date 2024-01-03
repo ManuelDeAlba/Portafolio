@@ -1,0 +1,33 @@
+---
+import Github from "./icons/Github.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+
+---
+
+<header id="inicio" class='w-[90%] max-w-[1000px] mx-auto m-auto mt-20'>
+    <nav class='w-full fixed top-0 left-0 flex justify-center py-2 z-50'>
+        <div class="bg-black/70 px-4 py-1 rounded-md flex gap-4 backdrop-blur-xl">
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <div class="flex flex-wrap items-end gap-8 mb-10">
+        <h1 class='text-6xl text-center text-gray-100'>Manuel De Alba</h1>
+        <a href="https://www.linkedin.com/in/manuel-de-alba-63737625b" class="text-xs font-medium px-2.5 py-0.5 rounded-md outline outline-2 outline-green-600/80 text-white dark:outline-green-800/80 dark:text-white/90 hover:outline-4 transition-all duration-100">Disponible para trabajar</a>
+    </div>
+
+    <p class='text-2xl mb-5 max-w-[60ch]'>Desarrollador web especializado en <span class="text-sky-300">React.js</span> y <span class="text-gray-200">Next.js</span>. Con conocimientos en <span class="text-orange-200">backend y bases de datos</span>.</p>
+
+    <p class="text-2xl mb-10 max-w-[60ch]">Interesado en el desarrollo de <span class="text-green-200">Inteligencia Artificial.</span></p>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+        <a class="flex gap-2 justify-center items-center p-2 outline outline-2 hover:outline-4 outline-slate-500 rounded-md transition-all duration-100 ease-linear" href="https://github.com/ManuelDeAlba" target="_blank">
+            <Github />
+        </a>
+        <a class="flex gap-2 justify-center items-center p-2 outline outline-2 hover:outline-4 outline-slate-500 rounded-md transition-all duration-200 ease-linear" href="https://www.linkedin.com/in/manuel-de-alba-63737625b/" target="_blank">
+            <LinkedIn />
+        </a>
+    </div>
+</header>
