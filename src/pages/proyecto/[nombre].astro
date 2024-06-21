@@ -26,9 +26,9 @@ const { id, src, title, description, technologies, web, github, testimonials } =
     </nav>
 
 	<main class='w-[90%] max-w-[1000px] mx-auto my-8 flex flex-col gap-8 text-white/85'>
-        <h1 class='text-4xl font-bold text-center mt-8'>{title}</h1>
+        <h1 class='text-4xl font-bold text-center mt-8 p-1 text-ellipsis overflow-hidden'>{title}</h1>
 
-        <div class="w-full max-w-screen-md h-[500px] mx-auto overflow-hidden">
+        <div class="w-full max-w-screen-md h-[min(500px,80vmin)] mx-auto overflow-hidden">
             <img src={src} alt={`${title} image`} class='w-full h-full object-cover rounded-lg hover:scale-105 transition-all' />
         </div>
 
