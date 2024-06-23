@@ -1,4 +1,6 @@
 ---
+import BackgroundBlob from "@/components/BackgroundBlob.astro";
+
 interface Props {
 	title: string;
 	description?: string;
@@ -17,6 +19,7 @@ const { title, description="Manuel De Alba's Portfolio" } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-slate-900 text-white">
+		<BackgroundBlob />
 		<slot />
 	</body>
 </html>

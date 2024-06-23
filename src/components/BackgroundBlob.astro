@@ -1,0 +1,29 @@
+<div class="blob fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[50vmin] blur-3xl bg-sky-500/30 -z-10"></div>
+
+<style>
+    .blob{
+		scale: 0.9;
+		border-radius: 80% 90% 30% 40% / 45% 70% 50% 50%;
+		animation: blob 3s infinite linear alternate, translate 15s infinite linear alternate;
+	}
+	@keyframes blob{
+		to{
+			border-radius: 50% 30% 10% 100% / 50% 50% 30% 100%;
+			scale: 1.1;
+		}
+	}
+	@keyframes translate{
+		25% {
+			transform: translate(-80%, -20%);
+		}
+		50% {
+			transform: translate(-20%, -80%);
+		}
+		75%{
+			transform: translate(-20%, -20%);
+		}
+		100%{
+			transform: translate(-80%, -80%);
+		}
+	}
+</style>
