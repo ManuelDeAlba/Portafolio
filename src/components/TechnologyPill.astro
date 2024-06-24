@@ -64,7 +64,7 @@ const TECHNOLOGIES = {
 const { technology } = Astro.props;
 ---
 
-<div class={TECHNOLOGIES[technology].class + " flex justify-center items-center gap-1 rounded-md px-3 py-2 font-bold tracking-wide ring-2 hover:ring-4 transition-all" }>
+<div transition:animate="slide" class={TECHNOLOGIES[technology].class + " flex justify-center items-center gap-1 rounded-md px-3 py-2 font-bold tracking-wide ring-2 hover:ring-4 transition-all" }>
     <img class="size-4" src={TECHNOLOGIES[technology].icon} alt="Logo">
     <h3 class="text-sm">{TECHNOLOGIES[technology].name}</h3>
 </div>

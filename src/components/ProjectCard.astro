@@ -3,6 +3,7 @@ import ExternalLink from './icons/ExternalLink.astro';
 import Github from './icons/Github.astro';
 
 interface Props {
+    id: number;
 	src: string;
 	title: string;
     description: string[];
@@ -10,17 +11,17 @@ interface Props {
     web?: string;
 }
 
-const { src="https://picsum.photos/500", title="Sin título", description=["Sin descripción"], github, web } = Astro.props;
+const { id, src="https://picsum.photos/500", title="Sin título", description=["Sin descripción"], github, web } = Astro.props;
 ---
 
 <div class="flex flex-col bg-slate-700 max-w-full rounded-md overflow-hidden">
     <figure class="w-full h-[300px] overflow-hidden">
-        <img class="w-full h-full object-cover hover:scale-110 transition-all" src={src} alt="Proyecto skillup" />
+        <img transition:name={`img-${id}`} class="w-full h-full object-cover hover:scale-110 transition-all" src={src} alt="Proyecto skillup" />
     </figure>
 
     <div class="flex flex-col flex-1 p-8">
-        <h3 class='text-2xl font-bold mb-4'>{title}</h3>
-        <div class="flex-1">
+        <h3 transition:name={`title-${id}`} class='text-2xl font-bold mb-4'>{title}</h3>
+        <div transition:name={`desc-${id}`} class="flex-1">
             {
                 description.map(p => (
                     <p class="text-lg max-w-[60ch] text-pretty mb-8">{p}</p>
@@ -31,14 +32,14 @@ const { src="https://picsum.photos/500", title="Sin título", description=["Sin 
         <div class="flex justify-evenly items-center gap-4">
             {
                 github != undefined && (
-                    <a class="w-[30px] text-xl" href={github} target="_blank">
+                    <a transition:name={`github-${id}`} class="w-[30px] text-xl" href={github} target="_blank">
                         <Github class="transition hover:-translate-y-1" />
                     </a>
                 )
             }
             {
                 web != undefined && (
-                    <a class="w-[30px] text-xl" href={web} target='_blank'>
+                    <a transition:name={`web-${id}`} class="w-[30px] text-xl" href={web} target='_blank'>
                         <ExternalLink class="transition hover:-translate-y-1" />
                     </a>
                 )

@@ -12,6 +12,7 @@ import proyectos from "../proyectos.js";
         {
             proyectos.map(proyecto => {
                 return <ProjectCard
+                    id={proyecto.id}
                     src={proyecto.src}
                     title={proyecto.title}
                     description={proyecto.description}
