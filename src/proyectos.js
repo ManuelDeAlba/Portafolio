@@ -27,7 +27,7 @@ export default [
         testimonials: [
             {
                 name: "Vanesa Orozco",
-                testimonial: "Manuel es un excelente profesional, siempre dispuesto a ayudar y aportar ideas para mejorar el proyecto. Su trabajo es de calidad y siempre cumple con los plazos de entrega. ¡Lo recomiendo ampliamente!"
+                testimonial: "Encantada con tu trabajo, muchísimas gracias, ¡a mis clientes y a mí nos encantó la página web! Muchísimas gracias, 100% recomendado."
             }
         ]
     },
