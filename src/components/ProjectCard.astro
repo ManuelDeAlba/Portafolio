@@ -12,6 +12,8 @@ interface Props {
 }
 
 const { id, src="https://picsum.photos/500", title="Sin título", description=["Sin descripción"], github, web } = Astro.props;
+
+const BASE_URL = import.meta.env.DEV ? "" : "https://manueldealba.com"
 ---
 
 <div class="flex flex-col bg-slate-700 max-w-full rounded-md overflow-hidden">
@@ -46,6 +48,6 @@ const { id, src="https://picsum.photos/500", title="Sin título", description=["
             }
         </div>
 
-        <a class="block px-4 py-2 bg-blue-700 rounded-md text-center mt-8" href={`/proyecto/${encodeURIComponent(title.toLowerCase().replaceAll(/\s+/g, "-"))}`}>Ver proyecto</a>
+        <a class="block px-4 py-2 bg-blue-700 rounded-md text-center mt-8" href={`${BASE_URL}/proyecto/${encodeURIComponent(title.toLowerCase().replaceAll(/\s+/g, "-"))}`}>Ver proyecto</a>
     </div>
 </div>
