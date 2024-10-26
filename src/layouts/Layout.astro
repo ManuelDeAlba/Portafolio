@@ -20,6 +20,15 @@ const { title, description="Manuel De Alba's Portfolio" } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JD397E26KW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-JD397E26KW');
+	</script>
 	<body class="bg-slate-900 text-white">
 		<BackgroundBlob />
 		<slot />
