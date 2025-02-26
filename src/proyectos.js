@@ -1,5 +1,14 @@
 export default [
     {
+        id: 8,
+        src: "/bangstaymd.png",
+        title: "Bangstaymd",
+        description: ["Sitio web para la publicación de postres. Incluye una forma para que el cliente se comunique con el vendedor por medio de whatsapp y haga un pedido de forma sencilla, permitiendo seleccionar los productos y rellenando los datos necesarios para automatizar el proceso de comunicación."],
+        technologies: ["html", "css", "js", "astro"],
+        web: "https://bangstaymd.netlify.app",
+        reciente: true
+    },
+    {
         id: 1,
         src: "/harty.jpg",
         title: "Harty",
@@ -46,15 +55,15 @@ export default [
         description: ["Plataforma para gestión del inventario de artículos varios para el hogar. Con sistema de autenticación y herramientas para registrar compras, ventas, productos apartados, ingresos, egresos y registro de movimientos."],
         technologies: ["html", "css", "js", "react", "firebase"]
     },
-    {
-        id: 6,
-        src: "/wikirickymorty.jpg",
-        title: "Wiki Rick and Morty",
-        description: ["Wiki de Rick & Morty, con información de los personajes, episodios y ubicaciones de la serie utilizando React.js y la API de Rick & Morty."],
-        technologies: ["html", "css", "js", "react"],
-        github: "https://github.com/ManuelDeAlba/rickandmortyapi",
-        web: "https://wikirickymorty.netlify.app/"
-    },
+    // {
+    //     id: 6,
+    //     src: "/wikirickymorty.jpg",
+    //     title: "Wiki Rick and Morty",
+    //     description: ["Wiki de Rick & Morty, con información de los personajes, episodios y ubicaciones de la serie utilizando React.js y la API de Rick & Morty."],
+    //     technologies: ["html", "css", "js", "react"],
+    //     github: "https://github.com/ManuelDeAlba/rickandmortyapi",
+    //     web: "https://wikirickymorty.netlify.app/"
+    // },
     {
         id: 7,
         src: "/vivero.jpg",

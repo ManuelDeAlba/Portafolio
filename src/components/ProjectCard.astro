@@ -9,14 +9,23 @@ interface Props {
     description: string[];
     github?: string;
     web?: string;
+    reciente?: boolean;
 }
 
-const { id, src="https://picsum.photos/500", title="Sin título", description=["Sin descripción"], github, web } = Astro.props;
+const { id, src="https://picsum.photos/500", title="Sin título", description=["Sin descripción"], github, web, reciente=false } = Astro.props;
 
 const BASE_URL = import.meta.env.DEV ? "" : "https://manueldealba.com"
 ---
 
-<div class="flex flex-col bg-slate-700 max-w-full rounded-md overflow-hidden">
+<div class="relative flex flex-col bg-slate-700 max-w-full rounded-md overflow-hidden">
+    {
+        reciente == true && (
+            <div class="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center absolute top-4 right-4 z-10 px-4 py-1 rounded-md">
+                <span>Más reciente</span>
+            </div>
+        )
+    }
+
     <figure class="w-full h-[300px] overflow-hidden">
         <img transition:name={`img-${id}`} class="w-full h-full object-cover hover:scale-110 transition-all" src={src} alt="Proyecto skillup" />
     </figure>
