@@ -10,13 +10,13 @@ export function getStaticPaths(){
     return proyectos.map((proyecto) => {
         return {
             params: {
-                nombre: encodeURIComponent(proyecto.title.toLowerCase().replaceAll(/\s+/g, "-"))
+                slug: proyecto.slug
             }
         }
     })
 }
-const { nombre } = Astro.params;
-const { id, src, title, description, technologies, web, github, testimonials } = proyectos.find((proyecto) => encodeURIComponent(proyecto.title.toLowerCase().replaceAll(/\s+/g, "-")) === nombre);
+const { slug } = Astro.params;
+const { id, src, title, description, technologies, web, github, testimonials } = proyectos.find((proyecto) => proyecto.slug === slug);
 ---
 
 <Layout title={`Proyecto ${title}`} description={description.join(" ")}>

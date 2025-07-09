@@ -6,13 +6,14 @@ interface Props {
     id: number;
 	src: string;
 	title: string;
+    slug: string;
     description: string[];
     github?: string;
     web?: string;
     reciente?: boolean;
 }
 
-const { id, src="https://picsum.photos/500", title="Sin título", description=["Sin descripción"], github, web, reciente=false } = Astro.props;
+const { id, src="https://picsum.photos/500", title="Sin título", slug="sin-slug", description=["Sin descripción"], github, web, reciente=false } = Astro.props;
 
 const BASE_URL = import.meta.env.DEV ? "" : "https://manueldealba.com"
 ---
@@ -57,6 +58,6 @@ const BASE_URL = import.meta.env.DEV ? "" : "https://manueldealba.com"
             }
         </div>
 
-        <a class="block px-4 py-2 bg-blue-700 rounded-md text-center mt-8" href={`${BASE_URL}/proyecto/${encodeURIComponent(title.toLowerCase().replaceAll(/\s+/g, "-"))}`}>Ver proyecto</a>
+        <a class="block px-4 py-2 bg-blue-700 rounded-md text-center mt-8" href={`${BASE_URL}/proyecto/${slug}`}>Ver proyecto</a>
     </div>
 </div>
