@@ -2,11 +2,20 @@ const PROJECTS_IMAGES_DIR = "/proyectos";
 
 export default [
     {
+        id: 9,
+        src: `${PROJECTS_IMAGES_DIR}/invitacion-digital.webp`,
+        title: "Invitación digital - ejemplo primera comunión",
+        description: ["Página web para invitar a eventos significativos como primeras comuniones, confirmaciones, bodas, cumpleaños, etc. Cuenta con el sistema de inicio de sesión para administradores, que permite gestionar invitados y visualizar mensajes recibidos de forma sencilla."],
+        technologies: ["html", "css", "js", "astro", "firebase", "tailwind"],
+        web: "https://invitacion-digital-primera-comunion.netlify.app/",
+        reciente: true
+    },
+    {
         id: 8,
         src: `${PROJECTS_IMAGES_DIR}/bangstaymd.webp`,
         title: "Bangstaymd",
         description: ["Sitio web para la publicación de postres. Incluye una forma para que el cliente se comunique con el vendedor por medio de whatsapp y haga un pedido de forma sencilla, permitiendo seleccionar los productos y rellenando los datos necesarios para automatizar el proceso de comunicación."],
-        technologies: ["html", "css", "js", "astro"],
+        technologies: ["html", "css", "js", "astro", "tailwind"],
         web: "https://bangstaymd.netlify.app",
         reciente: true
     },
